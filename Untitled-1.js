@@ -99,19 +99,11 @@ titles[0].textContent = 'Hello';
 titles[0].style.color = 'Black';
 
 headerTitle.textContent = 'Item Lister';
-
-li[2].style.backgroundColor = 'green';
-li[0].style.fontWeight = 'bold';
-li[1].style.fontWeight = 'bold';
-li[2].style.fontWeight = 'bold';
-li[3].style.fontWeight = 'bold';
-
-
-
-// Add new li element without the same class name
-var newListElement = document.createElement('li');
-newListElement.textContent = 'New List Item';
-newListElement.classList.add('new-item');
-var list = document.querySelector('ul');
-list.appendChild(newListElement);
-
+li[1].style.backgroundColor = 'green';
+li[2].style.display = 'none';
+var secondItem = document.querySelectorAll('.list-group-item')[1];
+secondItem.style.color = 'green';
+var oddElements = document.querySelectorAll('li:nth-child(odd)');
+for (var i = 0; i < oddElements.length; i++) {
+  oddElements[i].style.backgroundColor = 'green';
+}
