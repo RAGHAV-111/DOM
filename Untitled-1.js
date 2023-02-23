@@ -105,3 +105,13 @@ li[0].style.fontWeight = 'bold';
 li[1].style.fontWeight = 'bold';
 li[2].style.fontWeight = 'bold';
 li[3].style.fontWeight = 'bold';
+
+
+
+// Add new li element without the same class name
+var newListElement = document.createElement('li');
+newListElement.textContent = 'New List Item';
+newListElement.classList.add('new-item');
+var list = document.querySelector('ul');
+list.appendChild(newListElement);
+
