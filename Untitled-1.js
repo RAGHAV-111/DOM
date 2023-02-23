@@ -79,7 +79,7 @@ var even= document.querySelectorAll('li:nth-child(even)');
 
 for(var i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = '#f4f4f4';
-    even[i].style.backgroundColor = '#ccc';
+    even[i].style.backgroundColor = '';
 }
 
 li[0].style.color = 'black';
@@ -94,8 +94,13 @@ li[1].textContent = 'Item 2';
 
 
 console.log(titles);
-titles[0].textContent = 'Add Items';
-titles[0].style.fontWeight = 'bold';
-titles[0].style.color = 'green';
+titles[0].textContent = 'Hello';
+titles[0].style.color = 'Black';
 
 headerTitle.textContent = 'Item Lister';
+
+li[2].style.backgroundColor = 'green';
+li[0].style.fontWeight = 'bold';
+li[1].style.fontWeight = 'bold';
+li[2].style.fontWeight = 'bold';
+li[3].style.fontWeight = 'bold';
