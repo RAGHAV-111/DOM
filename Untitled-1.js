@@ -1,20 +1,19 @@
-console.dir(document);
+//DOM
+console.dir(document); 
 console.log(document.domain);
 console.log(document.URL);
 console.log(document.title);
 document.title = 123;
 console.log(document.doctype);
-console.log(document.head);
+console.log(document.head); 
 console.log(document.body);
-console.log(document.all);
-console.log(document.all[10]);
 document.alltextContent = 'Hello';
 console.log(document.forms[0]);
-console.log(document.links);
+console.log(document.links); 
 console.log(document.images);
 
 // GETELEMENTBYID //
-console.log(document.getElementById('header-title'));
+console.log(document.getElementById('header-title')); 
 var headerTitle = document.getElementById('header-title');
 var header = document.getElementById('main-header');
 console.log(headerTitle);
@@ -33,7 +32,7 @@ items[1].style.fontWeight = 'bold';
 items[1].style.backgroundColor = 'yellow';
 
 // Gives error
-//items.style.backgroundColor = '#f4f4f4';
+//items.style.backgroundColor='#f4f4f4';
 
 for (var i = 0; i < items.length; i++) {
     items[i].style.backgroundColor = '#f4f4f4';
@@ -43,34 +42,27 @@ for (var i = 0; i < items.length; i++) {
 var li = document.getElementsByTagName('li');
 console.log(li);
 console.log(li[1]);
-li[1].textContent = 'Hello 2';
-li[1].style.fontWeight = 'bold';
-li[1].style.backgroundColor = 'yellow';
+
 
 // // Gives error
-//itens.style.backgroundColor = '#f4f4f4';
+// //itens.style.backgroundColor = '#f4f4f4';
 
-for (var i = 0; i < li.length; i++) {
+for (var i = 0; i < li.length; i++){
     li[i].style.backgroundColor = '#f4f4f4';
 }
 
 // QUERYSELECTOR //
 var header = document.querySelector('#main-header');
-header.style.borderBottom = 'solid 4px #ccc';
+header.style.borderBottom= 'solid 4px #ccc';
 
 var input = document.querySelector('input');
-input.value = 'Hello World';
+input.value = '';
 
 var submit = document.querySelector('input[type="submit"]');
-submit.value = "SEND";
+submit.value = "Submit";
 
 var item = document.querySelector('.list-group-item');
 item.style.color = 'red';
-item.style.border = '2px solid black'; // Added black border
-
-var addItem = document.querySelector('.add-item');
-addItem.style.fontWeight = 'bold'; // Added bold font-weight
-addItem.style.color = 'green'; // Added green font color
 
 var lastItem = document.querySelector('.list-group-item:last-child');
 lastItem.style.color = 'blue';
@@ -80,13 +72,30 @@ secondItem.style.color = 'coral';
 // QUERY SELECTORALL //
 var titles = document.querySelectorAll('.title');
 
-console.log(titles);
-titles[0].textContent = 'Hello';
+
 
 var odd = document.querySelectorAll('li:nth-child(odd)');
-var even = document.querySelectorAll('li:nth-child(even)');
+var even= document.querySelectorAll('li:nth-child(even)');
 
-for (var i = 0; i < odd.length; i++) {
+for(var i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = '#f4f4f4';
     even[i].style.backgroundColor = '#ccc';
 }
+
+li[0].style.color = 'black';
+li[1].style.color = 'black';
+li[2].style.color = 'black';
+li[3].style.color = 'black';
+li[1].style.fontWeight = '';
+
+
+li[1].textContent = 'Item 2';
+
+
+
+console.log(titles);
+titles[0].textContent = 'Add Items';
+titles[0].style.fontWeight = 'bold';
+titles[0].style.color = 'green';
+
+headerTitle.textContent = 'Item Lister';
