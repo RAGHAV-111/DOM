@@ -1,4 +1,4 @@
-//DOM
+// DOM
 console.dir(document); 
 console.log(document.domain);
 console.log(document.URL);
@@ -12,7 +12,7 @@ console.log(document.forms[0]);
 console.log(document.links); 
 console.log(document.images);
 
-// GETELEMENTBYID //
+// GETELEMENTBYID
 console.log(document.getElementById('header-title')); 
 var headerTitle = document.getElementById('header-title');
 var header = document.getElementById('main-header');
@@ -23,7 +23,7 @@ console.log(headerTitle.innerText);
 headerTitle.innerHTML = '<h3>Hello</h3>';
 header.style.borderBottom = 'solid 3px #000';
 
-// GETELEMENTSBYCLASSNAME //
+// GETELEMENTSBYCLASSNAME
 var items = document.getElementsByClassName('list-group-item');
 console.log(items);
 console.log(items[1]);
@@ -38,20 +38,25 @@ for (var i = 0; i < items.length; i++) {
     items[i].style.backgroundColor = '#f4f4f4';
 }
 
-// GETELEMENTSBYTAGNAME //
+// GETELEMENTSBYTAGNAME
 var li = document.getElementsByTagName('li');
 console.log(li);
 console.log(li[1]);
 
+// Add new li element without the same class name
+var newListElement = document.createElement('li');
+newListElement.textContent = 'New List Item';
+newListElement.classList.add('new-item');
+var list = document.querySelector('ul');
+list.appendChild(newListElement);
 
-// // Gives error
-// //itens.style.backgroundColor = '#f4f4f4';
+//itens.style.backgroundColor = '#f4f4f4';
 
 for (var i = 0; i < li.length; i++){
     li[i].style.backgroundColor = '#f4f4f4';
 }
 
-// QUERYSELECTOR //
+// QUERYSELECTOR
 var header = document.querySelector('#main-header');
 header.style.borderBottom= 'solid 4px #ccc';
 
@@ -69,11 +74,8 @@ lastItem.style.color = 'blue';
 var secondItem = document.querySelector('.list-group-item:nth-child(2)');
 secondItem.style.color = 'coral';
 
-// QUERY SELECTORALL //
+// QUERYSELECTORALL
 var titles = document.querySelectorAll('.title');
-
-
-
 var odd = document.querySelectorAll('li:nth-child(odd)');
 var even= document.querySelectorAll('li:nth-child(even)');
 
@@ -88,10 +90,7 @@ li[2].style.color = 'black';
 li[3].style.color = 'black';
 li[1].style.fontWeight = '';
 
-
 li[1].textContent = 'Item 2';
-
-
 
 console.log(titles);
 titles[0].textContent = 'Hello';
